@@ -1,35 +1,24 @@
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.Arrays;
-import java.util.Collection;
-
-import org.junit.*;
+import org.junit.jupiter.api.Test;
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
 import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.*;
+import org.junit.runner.notification.Failure;
+import org.junit.runners.Suite;
 
-@RunWith(Parameterized.class)
+@RunWith(Suite.class)
+@Suite.SuiteClasses({ SinTest.class, CosTest.class, TanTest.class })
 public class TrignometryTest {
 
-	double input, expected;
-
-	public TrignometryTest(double input, double expected) {
-		this.input = input;
-		this.expected = expected;
-	}
-
-	@Parameters
-	public static Collection<Object[]> data() {
-		return Arrays.asList(new Object[][] { { 0, Math.sin(Math.toRadians(0)) },
-				{ 3.14 / 2, Math.sin(Math.toRadians(3.14 / 2)) }, { -1, Math.sin(Math.toRadians(-1)) },
-				{ 3.14, Math.sin(Math.toRadians(3.14)) } });
-	}
-
 	@Test
-	public void sinTest() {
-		double a = input;
-		double b = Trignometry.toRadian(a);
-		assertEquals(expected, Trignometry.sin(b), 0.01);
+	void test() {
+
+		Result result = JUnitCore.runClasses(TrignometryTest.class);
+		for (Failure failure : result.getFailures()) {
+			System.out.println(failure.toString());
+		}
+
+		//System.out.println(result.wasSuccessful());
+
 	}
 
 }
