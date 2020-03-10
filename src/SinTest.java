@@ -22,14 +22,24 @@ public class SinTest {
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][] { { 0, Math.sin(Math.toRadians(0)) },
 				{ 3.14 / 2, Math.sin(Math.toRadians(3.14 / 2)) }, { -1, Math.sin(Math.toRadians(-1)) },
-				{ 3.14, Math.sin(Math.toRadians(3.14)) } });
+				{ 3.14, Math.sin(Math.toRadians(3.14)) }, { 21474, Math.sin(Math.toRadians(21474)) },
+				{ 2147483647, Math.sin(Math.toRadians(2147483647)) },
+				{ -2147483647, Math.sin(Math.toRadians(-2147483647)) }, { 45, Math.sin(Math.toRadians(45)) },
+				{ 90, Math.sin(Math.toRadians(90)) }, { 135, Math.sin(Math.toRadians(135)) },
+				{ 180, Math.sin(Math.toRadians(180)) }, { 225, Math.sin(Math.toRadians(225)) },
+				{ 270, Math.sin(Math.toRadians(270)) }, { 360, Math.sin(Math.toRadians(360)) },
+				{ -45, Math.sin(Math.toRadians(-45)) }, { -90, Math.sin(Math.toRadians(-90)) },
+				{ -135, Math.sin(Math.toRadians(-135)) }, { -180, Math.sin(Math.toRadians(-180)) },
+				{ -225, Math.sin(Math.toRadians(-225)) }, { -270, Math.sin(Math.toRadians(-270)) },
+				{ -360, Math.sin(Math.toRadians(-360)) } });
 	}
 
 	@Test
 	public void sinTest() {
+
 		double a = input;
-		double b = Trignometry.toRadian(a);
-		assertEquals(expected, Trignometry.sin(b), 0.01);
+		double b = Trigonometry.toRadian(a);
+		assertEquals(expected, Trigonometry.sin(b), 0.01);
 	}
 
 }

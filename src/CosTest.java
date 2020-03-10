@@ -28,8 +28,8 @@ public class CosTest {
 	@Test
 	public void cosTest() {
 		double a = input;
-		double b = Trignometry.toRadian(a);
-		assertEquals(expected, Trignometry.cos(b), 0.01);
+		double b = Trigonometry.toRadian(a);
+		assertEquals(expected, Trigonometry.cos(b), 0.01);
 	}
 
 }

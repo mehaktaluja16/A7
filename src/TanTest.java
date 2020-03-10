@@ -28,8 +28,8 @@ public class TanTest {
 	@Test
 	public void tanTest() {
 		double a = input;
-		double b = Trignometry.toRadian(a);
-		assertEquals(expected, Trignometry.tan(b), 0.01);
+		double b = Trigonometry.toRadian(a);
+		assertEquals(expected, Trigonometry.tan(b), 0.01);
 	}
 
 }

@@ -7,12 +7,12 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({ SinTest.class, CosTest.class, TanTest.class })
-public class TrignometryTest {
+public class TrigonometryTest {
 
 	@Test
 	void test() {
 
-		Result result = JUnitCore.runClasses(TrignometryTest.class);
+		Result result = JUnitCore.runClasses(TrigonometryTest.class);
 		for (Failure failure : result.getFailures()) {
 			System.out.println(failure.toString());
 		}
