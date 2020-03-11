@@ -31,15 +31,17 @@ public class SinTest {
 				{ -45, Math.sin(Math.toRadians(-45)) }, { -90, Math.sin(Math.toRadians(-90)) },
 				{ -135, Math.sin(Math.toRadians(-135)) }, { -180, Math.sin(Math.toRadians(-180)) },
 				{ -225, Math.sin(Math.toRadians(-225)) }, { -270, Math.sin(Math.toRadians(-270)) },
-				{ -360, Math.sin(Math.toRadians(-360)) } });
+				{ -0.1, Math.sin(Math.toRadians(-0.1)) }, { 0.1, Math.sin(Math.toRadians(0.1)) } });
 	}
 
 	@Test
 	public void sinTest() {
 
+		
 		double a = input;
 		double b = Trigonometry.toRadian(a);
 		assertEquals(expected, Trigonometry.sin(b), 0.01);
+
 	}
 
 }
