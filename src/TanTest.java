@@ -48,10 +48,6 @@ public class TanTest {
 	@Test
 	public void tanTest() {
 		
-		//System.out.println(Trigonometry.tan(374.7920035732623));
-		//System.out.println(Math.tan(Math.toRadians(21474))+" "+ Trigonometry.tan(Trigonometry.toRadian(21474)));
-		
-		
 		double a = input;
 		double b = Trigonometry.toRadian(a);
 		assertEquals(expected, Trigonometry.tan(b),0.01);

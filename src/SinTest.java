@@ -36,7 +36,6 @@ public class SinTest {
 
 	@Test
 	public void sinTest() {
-
 		
 		double a = input;
 		double b = Trigonometry.toRadian(a);

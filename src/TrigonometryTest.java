@@ -17,7 +17,6 @@ public class TrigonometryTest {
 			System.out.println(failure.toString());
 		}
 
-		//System.out.println(result.wasSuccessful());
 
 	}
 
