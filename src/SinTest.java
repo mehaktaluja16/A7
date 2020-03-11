@@ -36,10 +36,6 @@ public class SinTest {
 
 	@Test
 	public void sinTest() {
-
-		// 90 = 1.5707963267948966
-		//System.out.println(Math.sin(Math.toRadians(270))+" "+Trigonometry.sin(Trigonometry.toRadian(270)));
-
 		
 		  double a = input; double b = Trigonometry.toRadian(a); assertEquals(expected,
 		  Trigonometry.sin(b), 0.01);
