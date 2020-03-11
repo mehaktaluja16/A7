@@ -1,15 +1,14 @@
 import java.math.BigInteger;
 
+/**
+ * @author Group 22 (Jobanpreet Singh, Lovejot Singh, Guntas Kaur, Mehak Taluja)
+ * @version 1.0
+ * 
+ *          This class calculate the value of sine, cosine and tan from radian
+ *          values entered as an input
+ * 
+ */
 public class Trigonometry {
-
-	/**
-	 * @author Group 22 (Jobanpreet Singh, Lovejot Singh, Guntas Kaur, Mehak Taluja)
-	 * @version 1.0
-	 * 
-	 *          This class calculate the value of sine, cosine and tan from radian
-	 *          values entered as an input
-	 * 
-	 */
 
 	/**
 	 * 
@@ -25,11 +24,11 @@ public class Trigonometry {
 		x = x % (2 * PI);
 
 		// compute the Taylor series approximation
-		double term = 1.0;
+
 		double result = 0.0;
 		result = x;
-		for (int i = 1; term != 0.0; i++) {
-			term *= (x / i);
+		// calclating result using taylor series
+		for (int i = 1; i < 50; i++) {
 			if (Double.isFinite(fact(i * 2 + 1).doubleValue()))
 				result += pow(-1, i) * pow(x, i * 2 + 1) / fact(i * 2 + 1).doubleValue();
 		}
@@ -45,8 +44,20 @@ public class Trigonometry {
 	 */
 	static double cos(double x) {
 
-		return -1;
+		final double PI = 3.141592653589793;
 
+		// convert x to an angle between -2 PI and 2 PI
+		x = x % (2 * PI);
+		// at angle 0 return 1
+
+		double result = 0.0;
+		// result = x;
+		for (int i = 0; i < 50; i++) {
+			if (Double.isFinite(fact(i * 2).doubleValue()))
+				// compute the Taylor series approximation
+				result += pow(-1, i) * pow(x, i * 2) / fact(i * 2).doubleValue();
+		}
+		return result;
 	}
 
 	/**
@@ -66,13 +77,13 @@ public class Trigonometry {
 	/**
 	 * 
 	 * @param x base value
-	 * @param p power value
+	 * @param d power value
 	 * @return x^p
 	 */
-	static double pow(double x, int p) {
+	static double pow(double x, double d) {
 		double result = 1;
 
-		for (double i = 1; i <= p; i++) {
+		for (double i = 1; i <= d; i++) {
 			result = result * x;
 		}
 
