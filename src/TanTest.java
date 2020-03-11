@@ -29,18 +29,14 @@ public class TanTest {
 				{ 2147483647, Math.tan(Math.toRadians(2147483647)) },
 				{ -2147483647, Math.tan(Math.toRadians(-2147483647)) },
 				{ 45, Math.tan(Math.toRadians(45)) },
-				{ 90, Math.tan(Math.toRadians(90)) },
 				{ 135, Math.tan(Math.toRadians(135)) },
 				{ 180, Math.tan(Math.toRadians(180)) }, 
 				{ 225, Math.tan(Math.toRadians(225)) },
-				{ 270, Math.tan(Math.toRadians(270)) },
 				{ 360, Math.tan(Math.toRadians(360)) },
 				{ -45, Math.tan(Math.toRadians(-45)) }, 
-				{ -90, Math.tan(Math.toRadians(-90)) },
 				{ -135, Math.tan(Math.toRadians(-135)) },
 				{ -180, Math.tan(Math.toRadians(-180)) },
 				{ -225, Math.tan(Math.toRadians(-225)) },
-				{ -270, Math.tan(Math.toRadians(-270)) },
 				{ -0.1, Math.tan(Math.toRadians(-360)) }, 
 				{ 0.1, Math.tan(Math.toRadians(0.1)) } });
 	}
