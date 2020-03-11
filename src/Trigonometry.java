@@ -67,7 +67,11 @@ public class Trigonometry {
 	 */
 	static double tan(double x) {
 
-		return -1;
+		double sin = sin(x);
+		double cos = cos(x);
+		double result = sin / cos;
+
+		return result;
 
 	}
 
