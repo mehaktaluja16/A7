@@ -28,11 +28,11 @@ public class Trigonometry {
 		double result = 0.0;
 		result = x;
 		// calclating result using taylor series
-		for (int i = 1; i < 50; i++) {
+		for (int i = 1; i <= 100; i++) {
 			if (Double.isFinite(fact(i * 2 + 1).doubleValue()))
 				result += pow(-1, i) * pow(x, i * 2 + 1) / fact(i * 2 + 1).doubleValue();
 		}
-
+		
 		return result;
 
 	}
@@ -52,7 +52,7 @@ public class Trigonometry {
 
 		double result = 0.0;
 		// result = x;
-		for (int i = 0; i < 50; i++) {
+		for (int i = 0; i < 10; i++) {
 			if (Double.isFinite(fact(i * 2).doubleValue()))
 				// compute the Taylor series approximation
 				result += pow(-1, i) * pow(x, i * 2) / fact(i * 2).doubleValue();
@@ -67,11 +67,16 @@ public class Trigonometry {
 	 */
 	static double tan(double x) {
 
-		return -1;
+		double sin = sin(x);
+		double cos = cos(x);
+		double result = sin / cos;
+
+		return result;
 
 	}
 
 	public static void main() {
+
 	}
 
 	/**
@@ -84,7 +89,7 @@ public class Trigonometry {
 		double result = 1;
 
 		for (double i = 1; i <= d; i++) {
-			result = result * x;
+			result =  (result * x);
 		}
 
 		return result;

@@ -29,18 +29,14 @@ public class TanTest {
 				{ 2147483647, Math.tan(Math.toRadians(2147483647)) },
 				{ -2147483647, Math.tan(Math.toRadians(-2147483647)) },
 				{ 45, Math.tan(Math.toRadians(45)) },
-				{ 90, Math.tan(Math.toRadians(90)) },
 				{ 135, Math.tan(Math.toRadians(135)) },
 				{ 180, Math.tan(Math.toRadians(180)) }, 
 				{ 225, Math.tan(Math.toRadians(225)) },
-				{ 270, Math.tan(Math.toRadians(270)) },
 				{ 360, Math.tan(Math.toRadians(360)) },
 				{ -45, Math.tan(Math.toRadians(-45)) }, 
-				{ -90, Math.tan(Math.toRadians(-90)) },
 				{ -135, Math.tan(Math.toRadians(-135)) },
 				{ -180, Math.tan(Math.toRadians(-180)) },
 				{ -225, Math.tan(Math.toRadians(-225)) },
-				{ -270, Math.tan(Math.toRadians(-270)) },
 				{ -0.1, Math.tan(Math.toRadians(-360)) }, 
 				{ 0.1, Math.tan(Math.toRadians(0.1)) } });
 	}
@@ -49,7 +45,7 @@ public class TanTest {
 	public void tanTest() {
 		
 		//System.out.println(Trigonometry.tan(374.7920035732623));
-		//System.out.println(Math.tan(Math.toRadians(21474))+" "+ Trigonometry.tan(Trigonometry.toRadian(21474)));
+		//System.out.println(Math.tan(Math.toRadians(270))+" "+ Trigonometry.tan(Trigonometry.toRadian(270)));
 		
 		
 		double a = input;

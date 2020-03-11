@@ -37,9 +37,14 @@ public class CosTest {
 
 	@Test
 	public void cosTest() {
+		
+		//System.out.println(Math.cos(1.5707963267948966)+" "+Trigonometry.sin(1.5707963267948966));
+		
+		
 		double a = input;
 		double b = Trigonometry.toRadian(a);
 		assertEquals(expected, Trigonometry.cos(b), 0.01);
+		
 	}
 
 }
