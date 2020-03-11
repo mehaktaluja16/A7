@@ -12,9 +12,7 @@ public class TrigonometryTest {
 	@Test
 	void test() {
 
-		//Getting results from all test classes
 		Result result = JUnitCore.runClasses(TrigonometryTest.class);
-		// looping through failures in each results
 		for (Failure failure : result.getFailures()) {
 			System.out.println(failure.toString());
 		}

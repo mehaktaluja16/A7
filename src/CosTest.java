@@ -37,11 +37,9 @@ public class CosTest {
 
 	@Test
 	public void cosTest() {
-				
 		double a = input;
 		double b = Trigonometry.toRadian(a);
 		assertEquals(expected, Trigonometry.cos(b), 0.01);
-		
 	}
 
 }

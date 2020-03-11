@@ -37,9 +37,10 @@ public class SinTest {
 	@Test
 	public void sinTest() {
 		
-		  double a = input; double b = Trigonometry.toRadian(a); assertEquals(expected,
-		  Trigonometry.sin(b), 0.01);
-		 
+		double a = input;
+		double b = Trigonometry.toRadian(a);
+		assertEquals(expected, Trigonometry.sin(b), 0.01);
+
 	}
 
 }
